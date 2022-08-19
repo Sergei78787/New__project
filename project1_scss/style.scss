@@ -50,6 +50,10 @@ body {
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.55);
                 margin: 0 0 0 40px;
+                transition: 1s;
+                &:hover {
+                    color: #fff;
+                }
             }
             .nav__link:first-child {
                 margin: 0;
@@ -146,6 +150,7 @@ body {
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
+            cursor: pointer;
             line-height: 24px;
             color: #FFFFFF;
             width: 130.43px;
@@ -164,6 +169,7 @@ body {
         position: absolute;
         top: 0;
         right: 0;
+        z-index: -99;
     }
     .links {
         margin: 110px 0 0 0;
@@ -227,12 +233,33 @@ body {
         .box__tools {
             width: 392px;
             height: 294px;
-            left: 108px;
-            top: 1157px;
             background: #1E252B;
             border-radius: 15px;
-            &:nth-child(1), &:nth-child(4){
-                margin: 0 0 100px 0;
+            transition: .9s;
+            margin: 0 0 100px 0;
+            &:hover .icon__collection .icon{
+                fill: #FD3B41;
+            }
+            &:hover .text{
+               color:rgba(255, 165, 55)
+            }
+            &:hover .name{
+                color: #fff;
+             }
+            &:hover .description{
+                color: #fff;
+            }
+            &:hover .visit{
+                color: #fff;
+                width: 106px;
+                height: 42px;
+                background: #FF6E30;
+                border-radius: 8px;
+            }
+            &:hover {
+                background: rgba(40, 48, 54, 0.6);
+                backdrop-filter: blur(50px);
+                margin: 20px 0 0 0;
             }
             .main {
                 width: 170px;
@@ -256,12 +283,14 @@ body {
             font-size: 20px;
             line-height: 36px;
             color: rgba(255, 255, 255, 0.78);
+            transition: 1s;
         }
         .text {
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
+            transition: 1s;
             line-height: 27px;
             color: rgba(255, 165, 55, 0.55);
         }
@@ -275,6 +304,7 @@ body {
             width: 326px;
             height: 60px;
             margin: 0 auto;
+            transition: 1s;
         }
         .icon__collection {
             display: flex;
@@ -283,7 +313,9 @@ body {
             .icon {
                 width: 42px;
                 height: 42px;
-                margin: 0 159px 0 0;
+                margin: 0 124px 0 0;
+                fill: white;
+                transition: 1s;
                 &:first-child {
                     margin: 0 12px 0 33px;
                 }
@@ -295,6 +327,12 @@ body {
                 font-size: 16px;
                 line-height: 24px;
                 color: rgba(255, 255, 255, 0.55);
+                width: 106px;
+                height: 42px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 1s;
             }
         }
     }
@@ -373,6 +411,31 @@ body {
             flex-wrap: wrap;
             justify-content: space-evenly;
             .box {
+                transition: 1s;
+                &:hover .icon__collection .icon{
+                    fill: #FD3B41;
+                }
+                &:hover .main .text{
+                   color:rgba(255, 165, 55)
+                }
+                &:hover .main .name{
+                    color: #fff;
+                 }
+                &:hover .description{
+                    color: #fff;
+                }
+                &:hover .visit{
+                    color: #fff;
+                    width: 106px;
+                    height: 42px;
+                    background: #FF6E30;
+                    border-radius: 8px;
+                }
+                &:hover {
+                    background: rgba(40, 48, 54, 0.6);
+                    backdrop-filter: blur(50px);
+                    padding: 20px 0 0 0;
+                }
                 width: 288px;
                 height: 284px;
                 background: #1E252B;
@@ -395,10 +458,12 @@ body {
                         width: 300px;
                         font-weight: 500;
                         font-size: 20px;
+                        transition: 1s;
                         line-height: 36px;
                         color: rgba(255, 255, 255, 0.78);
                     }
                     .text {
+                        transition: 1s;
                         font-family: 'Poppins';
                         font-style: normal;
                         font-weight: 400;
@@ -417,12 +482,14 @@ body {
                     width: 245px;
                     height: 60px;   
                     margin: 0 auto;
+                    transition: 1s;
                 }
                 .icon__collection {
                     display: flex;
                     align-items: center;
                     margin: 30px 0 0 0;
                     .icon {
+                        fill: white;
                         width: 42px;
                         height: 42px;
                         margin: 0 43px 0 0;
@@ -433,6 +500,12 @@ body {
                     .visit {
                         font-family: 'Poppins';
                         font-style: normal;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 1s;
+                        width: 106px;
+                        height: 42px;
                         font-weight: 600;
                         font-size: 16px;
                         line-height: 24px;
@@ -544,6 +617,7 @@ body {
                 border-radius: 8px;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
                 justify-content: center;
             }
         }
@@ -598,9 +672,6 @@ body {
                     color: rgba(255, 255, 255, 0.9);
                 }
             }
-        }
-        .block {
-
         }
     }
 }
